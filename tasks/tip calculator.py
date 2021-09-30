@@ -1,3 +1,11 @@
+"""
+
+Author: Cody Swindells
+
+A previous code challange I had completed that calculats tips
+
+"""
+
 import unicodedata
 
 class tips:

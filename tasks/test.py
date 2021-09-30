@@ -1,3 +1,12 @@
+"""
+Author: Cody Swindells
+
+Testing ground while I was learning build upon the use of beautiful soup.
+
+
+"""
+
+
 from bs4 import BeautifulSoup
 import requests as r
 
