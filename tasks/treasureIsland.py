@@ -4,7 +4,9 @@ Author: Cody Swindells
 
 Created: 29/09/21
 
-Modified: 30/09/21
+Modified: 01/10/21
+
+Completed and consider all situation to avoid index out of range error.
 
 
 """
@@ -49,13 +51,15 @@ class treasureIsland:
         x = "❌"
         position = input("Where do you want to put the treasure? ")
         map = treasureStarter.map
-        if(len(position) == 1):
+        if(len(position) < 2):
             treasureIsland.main()
-        else:
+        elif(int(position[1]) < 2):
             if(int(position[0]) < len(map[0])-1 or int(position[1]) < len(map[0])-1):
                 map[int(position[0])][int(position[1])] = x
                 print(f"{map[0]}\n{map[1]}\n{map[2]}")
             else:
                 treasureIsland.main()
+        else:
+            treasureIsland.main()
 treasureStarter.initialise()
 treasureIsland.main()
