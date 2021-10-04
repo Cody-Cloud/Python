@@ -8,7 +8,9 @@ Modified: 04/10/21
 
 #BUGFIX
 
-Completed
+Addng computer wins vs what player selects
+
+Completed - additions make it more complete game
 
 """
 
@@ -90,6 +92,12 @@ class rock:
         else:
             print(f"Computer selectes {rockStarter.game[computer_select][1]}")
             print(rockStarter.game[computer_select][0])
+            print(f"Player selects {user_select}")
+            for (select, name) in rockStarter.game: #using tuple unpacking
+                if(name == user_select):
+                    print(select)
+                else:
+                    continue
             print("Computer Wins!")
 
 
