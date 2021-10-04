@@ -6,13 +6,13 @@ Created: 01/10/21
 
 Modified: 04/10/21
 
-#BUGFIX
-
 Addng computer wins vs what player selects
 
 Completed - additions make it more complete game
 
-Working on - a method to deal with unexpected user input.
+Added - a method to deal with unexpected user input.
+
+#BUGFIXED - paper choice not working 
 
 """
 
@@ -68,12 +68,11 @@ class rock:
         Either rock, paper or scissors.
         """
         user_select = input("Please make a choice. Either rock, paper or scissors. \n")
-        for (select, name) in rockStarter.game: #using tuple unpacking
+        for i, (select, name) in enumerate(rockStarter.game): #using tuple unpacking
             if(name == user_select):
                 return user_select
-            else:
+            elif(i == len(rockStarter.game) and name != user_select):
                 rock.main(rock.user()) #recursion
-
     def main(user_select):
         """
         Main function which contains all 
