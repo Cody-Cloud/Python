@@ -12,6 +12,8 @@ Addng computer wins vs what player selects
 
 Completed - additions make it more complete game
 
+Working on - a method to deal with unexpected user input.
+
 """
 
 import random
@@ -58,8 +60,19 @@ class rock:
     #Main class object from the rock paper
     """
     def user():
+        """
+        Simple function to return selected user choice in the game.
+
+        Returns:
+
+        Either rock, paper or scissors.
+        """
         user_select = input("Please make a choice. Either rock, paper or scissors. \n")
-        return user_select
+        for (select, name) in rockStarter.game: #using tuple unpacking
+            if(name == user_select):
+                return user_select
+            else:
+                rock.main(rock.user()) #recursion
 
     def main(user_select):
         """
