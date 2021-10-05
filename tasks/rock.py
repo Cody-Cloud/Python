@@ -68,7 +68,7 @@ class rock:
         Either rock, paper or scissors.
         """
         user_select = input("Please make a choice. Either rock, paper or scissors. \n")
-        for i, (select, name) in enumerate(rockStarter.game): #using tuple unpacking
+        for i, (select, name) in enumerate(rockStarter.game): #using tuple unpacking and enumerate
             if(name == user_select):
                 return user_select
             elif(i == len(rockStarter.game) and name != user_select):
