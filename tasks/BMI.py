@@ -38,7 +38,15 @@ class BMI:
     elif BMI > 35:
       print("You are over 35, therefore are clinically obese.")
 
-  while(1):
-      height = float(input("enter your height in m: "))
-      weight = float(input("enter your weight in m: "))
-      BMICAL(height, weight)
+  def main():
+    """
+
+    Main function
+
+    """
+    height = float(input("enter your height in m: "))
+    weight = float(input("enter your weight in m: "))
+    BMI.BMICAL(height, weight)
+
+
+BMI.main()
