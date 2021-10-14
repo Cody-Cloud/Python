@@ -2,7 +2,9 @@
 
 Author: Cody Swindells
 
-Modfied: 06/10/21
+Modfied: 14/10/21
+
+First completed task that I added my exit module to.
 
 """
 
@@ -33,6 +35,6 @@ class leapYear:
         """
         leapYear.Leap()
 
-leapYear.main()
+exit.exitProgram.main(leapYear.main) #exit now works via higher order functions
 
     
