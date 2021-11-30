@@ -68,6 +68,6 @@ class passGen:
                 else:
                     continue
 
-        print(f"This is your new password {passwordStr} at length {total_length} {nr_symbols} {nr_letters} {nr_numbers} {len(passwordStr)}.\n")
+        print(f"This is your new password {passwordStr}.\n")
 
 passGen.passMain()
