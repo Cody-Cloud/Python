@@ -14,9 +14,12 @@ Task to created a strong password generator
 
 Now works.
 
+Added exit function loop.
+
 """
 
 import random
+import exit
 
 class passGen:
     """
@@ -39,8 +42,6 @@ class passGen:
         nr_letters = int(input(f"How many letters would you like in your password?\n")) 
         nr_symbols = int(input(f"How many symbols would you like?\n"))
         nr_numbers = int(input(f"How many numbers would you like?\n"))
-
-        total_length =  nr_letters + nr_symbols + nr_numbers
 
         random_select = 0
 
@@ -70,4 +71,4 @@ class passGen:
 
         print(f"This is your new password {passwordStr}.\n")
 
-passGen.passMain()
+exit.exitProgram.main(passGen.passMain) # my recent pass through function for exit loops
