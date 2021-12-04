@@ -5,7 +5,7 @@ Author: Cody Swindells
 
 Created: 01/12/21
 
-Modified: 01/12/21
+Modified: 04/12/21
 
 
 """
@@ -42,15 +42,35 @@ class hangman:
         hangman.blank_word = '_'*len(hangman.chosen_word)
         print(hangman.blank_word)
 
-    def ask_user()
+    def ask_user():
+        """
+        Checks a user letter guess against a randomly word from a list.
+        
+        """
+        guess = input(f"Please enter enter a letter. \n").lower()
+
+        if(guess in hangman.chosen_word):
+            print("Letter is in.")
+        else:
+            print("Letter is not in.")
+
+
+
 
     def main():
+        """
+        Main function exection for hangman project.
+        
+        """
+        hangman.select_word()
+
+        print(hangman.chosen_word)
+
+        hangman.present_blank()
+        hangman.ask_user()
 
 
 
 
-hangman.select_word()
 
-print(hangman.chosen_word)
-
-hangman.present_blank()
+exit.exitProgram.main(hangman.main) #import my exit function loop for now.
